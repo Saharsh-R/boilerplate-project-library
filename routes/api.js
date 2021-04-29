@@ -10,7 +10,7 @@
 
 require('dotenv').config()
 let mongoose = require("mongoose");
-mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true ,useFindAndModify: false});
 const bookSchema = new mongoose.Schema({
   title: String,
   comments: [String]
